@@ -1,0 +1,451 @@
+body{
+    max-width: 100%;
+    margin: 0;
+    padding-top: 10.625rem;
+    font-family: sans-serif;
+}
+header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 6rem;
+    background: black;
+    box-shadow: 0rem 0.5rem 1.3rem black;
+    z-index: 10;
+}
+.logo{
+    max-width: 10.625rem;
+    height: 6rem;
+}
+.title{
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(0, 0, 194);
+    text-shadow: 0rem 0.3rem 3rem rgba(25, 0, 83, 0.712);
+    border-bottom: 0.13rem solid rgb(240, 128, 128);
+    margin-bottom: 6rem;
+}
+.title-album,
+.title-ep,
+.title-mix-tape{
+    max-width: 18.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(3, 3, 139);
+    border-bottom: 0.156rem solid lightseagreen;
+}
+p{
+    max-width: 70%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.emb,
+.lyke-mike,
+.lveu,
+.wys,
+.icy-hot,
+.pme,
+.efdp{
+    text-align: center;
+    color: rgb(6, 0, 94);
+}
+.container-discografia{
+    display: flex;
+    flex-direction: column;
+}
+.cover{
+    display: block;
+    max-width: 18.75rem;
+    height: 18.75rem;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.3rem;
+}
+.container-album,
+.container-ep,
+.container-mix-tape{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+    margin-bottom: 6rem;
+}
+.card-emb,
+.card-lyke-mike,
+.card-lveu,
+.card-wys,
+.card-icy-hot,
+.card-pme,
+.card-efdp{
+    max-width: 25rem;
+    height: auto;
+    margin: 1.875rem;
+    border-radius: 0.625rem;
+    border: 0.19rem solid rgba(240, 128, 128, 0.5);
+    background: rgba(240, 128, 128, 0.308);
+    box-shadow: 0.438rem 0.438rem 0.9rem rgb(77, 43, 43);
+}
+.btn-ver-tracklist-emb,
+.btn-ver-tracklist-lyke-mike,
+.btn-ver-tracklist-lveu,
+.btn-ver-tracklist-pme,
+.btn-ver-tracklist-wys,
+.btn-ver-tracklist-icy-hot,
+.btn-ver-tracklist-efdp{
+    display: block;
+    text-align: center;
+    max-width: 7.188rem;
+    height: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.9rem;
+    border-radius: 0.438rem;
+    line-height: 2rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: rgb(193, 255, 193);
+    background: rgb(16, 0, 107);
+    transition: 0.2s;
+    cursor: pointer;
+}
+.btn-ver-tracklist-emb:hover,
+.btn-ver-tracklist-lyke-mike:hover,
+.btn-ver-tracklist-lveu:hover,
+.btn-ver-tracklist-pme:hover,
+.btn-ver-tracklist-wys:hover,
+.btn-ver-tracklist-icy-hot:hover,
+.btn-ver-tracklist-efdp:hover{
+    background: black;
+    transform: translateY(0.19rem);
+}
+#btn-modal-emb,
+#btn-modal-lyke-mike,
+#btn-modal-lveu,
+#btn-modal-pme,
+#btn-modal-wys,
+#btn-modal-icy-hot,
+#btn-modal-efdp{
+    display: none;
+}
+.modal-emb,
+.modal-lyke-mike,
+.modal-lveu,
+.modal-pme,
+.modal-wys,
+.modal-icy-hot,
+.modal-efdp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.007);
+    backdrop-filter: blur(0.3rem);
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-modal-emb:checked ~ .modal-emb,
+#btn-modal-lyke-mike:checked ~ .modal-lyke-mike,
+#btn-modal-lveu:checked ~ .modal-lveu,
+#btn-modal-pme:checked ~ .modal-pme,
+#btn-modal-wys:checked ~ .modal-wys,
+#btn-modal-icy-hot:checked ~ .modal-icy-hot,
+#btn-modal-efdp:checked ~ .modal-efdp{
+    opacity: 1;
+    visibility: visible;
+}
+.contenido-modal-emb,
+.contenido-modal-lyke-mike,
+.contenido-modal-lveu,
+.contenido-modal-pme,
+.contenido-modal-wys,
+.contenido-modal-icy-hot,
+.contenido-modal-efdp{
+    position: relative;
+    top: 6vh;
+    max-width: 25rem;
+    height:auto;
+    margin: auto;
+    border-radius: 0.438rem;
+    background: white;
+    box-shadow: 0.06rem 0.438rem 1.6rem black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    transform: translateY(-30%);
+}
+#btn-modal-emb:checked ~ .modal-emb .contenido-modal-emb,
+#btn-modal-lyke-mike:checked ~ .modal-lyke-mike .contenido-modal-lyke-mike,
+#btn-modal-lveu:checked ~ .modal-lveu .contenido-modal-lveu,
+#btn-modal-pme:checked ~ .modal-pme .contenido-modal-pme,
+#btn-modal-wys:checked ~ .modal-wys .contenido-modal-wys,
+#btn-modal-icy-hot:checked ~ .modal-icy-hot .contenido-modal-icy-hot,
+#btn-modal-efdp:checked ~ .modal-efdp .contenido-modal-efdp{
+     transform: translateY(0%);
+ }
+.header-modal-emb,
+.header-modal-lyke-mike,
+.header-modal-lveu,
+.header-modal-pme,
+.header-modal-wys,
+.header-modal-icy-hot,
+.header-modal-efdp{
+    position: relative;
+    top: 3.125rem;
+    max-width: 100%;
+    height: 2.5rem;
+    overflow: hidden;
+    line-height: 2.5rem;
+    font-size: 1.25rem;
+    background: lightgreen;
+    color: rgb(0, 0, 0);
+    box-shadow: none;
+}
+.header-modal-wys{
+    top: 2.938rem;
+}
+.container-modal-emb label,
+.container-modal-lyke-mike label,
+.container-modal-lveu label,
+.container-modal-pme label,
+.container-modal-wys label,
+.container-modal-icy-hot label,
+.container-modal-efdp label{
+    position: absolute;
+    top: 0.09rem;
+    right: 0rem;
+    width: 2.313rem;
+    height: 2.313rem;
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: rgb(236, 227, 255);
+    line-height: 2.313rem;
+    text-align: center;
+    font-size: 1.25rem;
+    background: black;
+    cursor: pointer;
+    z-index: 30;
+    display: block;
+}
+li{
+    font-size: 1.25rem;
+}
+.container-biografia{
+    max-width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+}
+.contactos{
+    max-width: 100%;
+    height: 10.625rem;
+    background: beige;
+}
+.contactos-son{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height: 6rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.redes-sociales{
+    font-size: 1.6rem;
+}
+.i{
+    margin-left: 1.875rem;
+    color: black;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    height: 25rem;
+    color: white;
+    background: black;
+}
+.footer-son{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 18.75rem;
+    height: 6rem;
+    margin: auto;
+    font-size: 1.3rem;
+}
+.mi{
+    color: white;
+}
+.m{
+    max-width: 100%;
+    height: 0.125rem;
+    line-height: 0.125rem;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: m;
+}
+@keyframes m {
+    0%{
+        transform: translateX(13rem);
+    }
+    100%{
+        transform: translateX(-12.5rem);
+    }
+}
+
+/* ------------------------------------------RESPONSIVE */
+
+@media (max-height: 700px){
+    .modal{
+        margin-top: 1.875rem;
+    }
+    .header-modal-emb,
+    .header-modal-lyke-mike,
+    .header-modal-lveu,
+    .header-modal-wys,
+    .header-modal-icy-hot,
+    .header-modal-pme,
+    .header-modal-efdp{
+        top: 4.375rem;
+    }
+    li{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 600px){
+    .title{
+        font-size: 2rem;
+    }
+    .title-album,
+.title-ep,
+.title-mix-tape{
+    font-size: 1.3rem;
+}
+.logo{
+    max-width: 8.75rem;
+    height: 4.375rem;
+}
+.contactos-son{
+    font-size: 0.9rem;
+}
+li{
+    font-size: 1rem;
+}
+}
+@media (max-width:550px){
+    .modal{
+        max-width: 18.75rem;
+        overflow-y: scroll;
+    }
+    li{
+        font-size: 1rem;
+    }
+}
+@media (max-height: 480px){
+    .contenido-modal-emb,
+    .contenido-modal-lyke-mike,
+    .contenido-modal-lveu,
+    .contenido-modal-efdp{
+        top: 5rem;
+        max-width: 25rem;
+        height: 28.125rem;
+        overflow-y: scroll;
+    }
+    .contenido-modal-pme,
+    .contenido-modal-wys,
+    .contenido-modal-icy-hot{
+        margin-top: 0;
+    }
+    .header-modal-emb,
+    .header-modal-lyke-mike,
+    .header-modal-lveu,
+    .header-modal-efdp{
+        top: 6.875rem;
+    }
+    .header-modal-wys,
+    .header-modal-icy-hot,
+    .header-modal-pme{
+        top: 0.313rem;
+    }
+    li{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 416px){
+    .cover{
+        max-width: 12.5rem;
+        height: 12.5rem;
+    }
+    .title{
+        font-size: 1.3rem;
+    }
+    .redes-sociales{
+        font-size: 0.9rem;
+    }
+    .footer-son{
+        font-size: 0.8rem;
+    }
+    li{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 380px){
+    .emb,
+.lyke-mike,
+.lveu,
+.wys,
+.icy-hot,
+.pme,
+.efdp{
+    font-size: 1.3rem;
+}
+p{
+    font-size: 0.9rem;
+}
+.logo{
+    max-width: 7.5rem;
+    height: 3.125rem;
+}
+.mi{
+    font-size: 0.8rem;
+}
+.modal{
+    max-width: 12.5rem;
+    font-size: 1.563rem;
+}
+.header-modal-emb{
+    text-align: center;
+}
+li{
+    font-size: 1rem;
+}
+.container-biografia{
+    font-size: 1rem;
+}
+}
+@media (max-width: 292px){
+    .cover{
+        max-width: 6rem;
+        height: 6rem;
+    }
+    li{
+        font-size: 0.938rem;
+    }
+}
