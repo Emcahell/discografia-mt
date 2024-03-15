@@ -1,25 +1,9 @@
 body{
     max-width: 100%;
     margin: 0;
-    padding-top: 10.625rem;
     font-family: sans-serif;
 }
-header{
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 6rem;
-    background: #000000e7;
-    box-shadow: 0rem 0.5rem 1.3rem #000000fa;
-    z-index: 10;
-}
-.logo{
-    max-width: 8.625rem;
-    height: 5rem;
-}
+
 .title{
     text-align: center;
     font-size: 3rem;
@@ -48,6 +32,7 @@ p{
 .emb,
 .lyke-mike,
 .lveu,
+.vltnlm,
 .wys,
 .icy-hot,
 .pme,
@@ -80,6 +65,7 @@ p{
 .card-emb,
 .card-lyke-mike,
 .card-lveu,
+.card-vltnlm,
 .card-wys,
 .card-icy-hot,
 .card-pme,
@@ -95,6 +81,7 @@ p{
 .btn-ver-tracklist-emb,
 .btn-ver-tracklist-lyke-mike,
 .btn-ver-tracklist-lveu,
+.btn-ver-tracklist-vltnlm,
 .btn-ver-tracklist-pme,
 .btn-ver-tracklist-wys,
 .btn-ver-tracklist-icy-hot,
@@ -118,6 +105,7 @@ p{
 .btn-ver-tracklist-emb:hover,
 .btn-ver-tracklist-lyke-mike:hover,
 .btn-ver-tracklist-lveu:hover,
+.btn-ver-tracklist-vltnlm:hover,
 .btn-ver-tracklist-pme:hover,
 .btn-ver-tracklist-wys:hover,
 .btn-ver-tracklist-icy-hot:hover,
@@ -128,6 +116,7 @@ p{
 #btn-modal-emb,
 #btn-modal-lyke-mike,
 #btn-modal-lveu,
+#btn-modal-vltnlm,
 #btn-modal-pme,
 #btn-modal-wys,
 #btn-modal-icy-hot,
@@ -137,6 +126,7 @@ p{
 .modal-emb,
 .modal-lyke-mike,
 .modal-lveu,
+.modal-vltnlm,
 .modal-pme,
 .modal-wys,
 .modal-icy-hot,
@@ -158,6 +148,7 @@ p{
 #btn-modal-emb:checked ~ .modal-emb,
 #btn-modal-lyke-mike:checked ~ .modal-lyke-mike,
 #btn-modal-lveu:checked ~ .modal-lveu,
+#btn-modal-vltnlm:checked ~ .modal-vltnlm,
 #btn-modal-pme:checked ~ .modal-pme,
 #btn-modal-wys:checked ~ .modal-wys,
 #btn-modal-icy-hot:checked ~ .modal-icy-hot,
@@ -168,6 +159,7 @@ p{
 .contenido-modal-emb,
 .contenido-modal-lyke-mike,
 .contenido-modal-lveu,
+.contenido-modal-vltnlm,
 .contenido-modal-pme,
 .contenido-modal-wys,
 .contenido-modal-icy-hot,
@@ -175,7 +167,7 @@ p{
     position: relative;
     top: 6vh;
     max-width: 25rem;
-    height: 70vh;
+    height: auto;
     margin: auto;
     border-radius: 0.438rem;
     background: white;
@@ -189,6 +181,7 @@ p{
 #btn-modal-emb:checked ~ .modal-emb .contenido-modal-emb,
 #btn-modal-lyke-mike:checked ~ .modal-lyke-mike .contenido-modal-lyke-mike,
 #btn-modal-lveu:checked ~ .modal-lveu .contenido-modal-lveu,
+#btn-modal-vltnlm:checked ~ .modal-vltnlm .contenido-modal-vltnlm,
 #btn-modal-pme:checked ~ .modal-pme .contenido-modal-pme,
 #btn-modal-wys:checked ~ .modal-wys .contenido-modal-wys,
 #btn-modal-icy-hot:checked ~ .modal-icy-hot .contenido-modal-icy-hot,
@@ -198,6 +191,7 @@ p{
 .header-modal-emb,
 .header-modal-lyke-mike,
 .header-modal-lveu,
+.header-modal-vltnlm,
 .header-modal-pme,
 .header-modal-wys,
 .header-modal-icy-hot,
@@ -219,6 +213,7 @@ p{
 .container-modal-emb label,
 .container-modal-lyke-mike label,
 .container-modal-lveu label,
+.container-modal-vltnlm label,
 .container-modal-pme label,
 .container-modal-wys label,
 .container-modal-icy-hot label,
@@ -253,7 +248,7 @@ li{
 }
 .contactos{
     max-width: 100%;
-    height: 10.625rem;
+    height: 6rem;
     background: beige;
 }
 .contactos-son{
@@ -264,13 +259,6 @@ li{
     height: 6rem;
     text-align: center;
     font-size: 1.3rem;
-}
-.redes-sociales{
-    font-size: 1.6rem;
-}
-.i{
-    margin-left: 1.875rem;
-    color: black;
 }
 
 .footer{
@@ -290,8 +278,15 @@ li{
     margin: auto;
     font-size: 1.3rem;
 }
+
+a{
+    margin: 23px;   
+}
 .mi{
     color: white;
+}
+.yo{
+    opacity: 0.3;
 }
 .m{
     max-width: 100%;
@@ -326,6 +321,7 @@ li{
     .header-modal-emb,
     .header-modal-lyke-mike,
     .header-modal-lveu,
+    .header-modal-vltnlm,
     .header-modal-wys,
     .header-modal-icy-hot,
     .header-modal-pme,
@@ -371,6 +367,7 @@ li{
     .contenido-modal-emb,
     .contenido-modal-lyke-mike,
     .contenido-modal-lveu,
+    .contenido-modal-vltnlm,
     .contenido-modal-efdp{
         top: 5rem;
         max-width: 25rem;
@@ -385,6 +382,7 @@ li{
     .header-modal-emb,
     .header-modal-lyke-mike,
     .header-modal-lveu,
+    .header-modal-vltnlm,
     .header-modal-efdp{
         top: 6.875rem;
     }
@@ -426,6 +424,7 @@ li{
 .emb,
 .lyke-mike,
 .lveu,
+.vltnlm,
 .wys,
 .icy-hot,
 .pme,
